@@ -31,7 +31,6 @@ export const getPosts = async () => {
       }
     }
   `
-
   const result = await request(graphqlAPI, query);
   return result.postsConnection.edges;
 
@@ -53,7 +52,6 @@ export const getRecentPosts = async () => {
       }
     }
   `
-
   const result = await request(graphqlAPI, query);
   return result.posts;
 } 
@@ -74,4 +72,17 @@ export const getSimilarPosts = async () => {
       }
     }
   `
+}
+
+export const getCategories = async () => {
+  const query = gql `
+    query GetCategories {
+      categories { 
+        name
+        slug
+      }
+    }  
+  `
+  const result = await request(graphqlAPI, query);
+  return result.categories;
 }
