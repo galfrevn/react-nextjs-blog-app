@@ -1,5 +1,11 @@
 {
+  "name": "react-blog-app",
+  "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,12 +15,15 @@
     "graphql": "^15.7.2",
     "graphql-request": "^3.6.1",
     "html-react-parser": "^1.4.0",
+    "json-web-token": "^3.2.0",
     "moment": "^2.29.1",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.1.1",
     "react-multi-carousel": "^2.6.5",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "swr": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
