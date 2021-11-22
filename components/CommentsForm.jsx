@@ -93,7 +93,7 @@ const CommentsForm = ({ slug }) => {
         Leave a reply
       </h1>
 
-      <div className="bg-white rounded-lg p-8 pb-12 mb-8">
+      <div className="bg-white rounded-lg md:p-8 p-3 pb-12 mb-8">
         <div className="grid grid-cols-1 gap-4 mb-4">
           <textarea
             value={formData.comment}

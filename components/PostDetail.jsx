@@ -89,7 +89,7 @@ const PostDetail = ({ post }) => {
       </div>
 
       <div className="pb-12 mb-8">
-        <div className="flex items-center mb-8 w-full"></div>
+        <div className="flex text-gray-600 items-center mb-8 w-full"></div>
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemindex) =>
             getContentFragment(itemindex, item.text, item)
