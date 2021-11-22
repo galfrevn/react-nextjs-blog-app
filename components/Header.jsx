@@ -52,11 +52,11 @@ const Header = () => {
   return (
     <div className="mb-8">
       <nav class="relative w-full  md:px-10 px-4 py-4 flex justify-between items-right bg-white">
-        <div>
-          <a class="text-xl text-gray-700 font-bold" href="#">
+        <div class="flex flex-column align-center justify-center">
+          <a class="text-xl text-gray-700 font-bold" href="/#">
             VN
           </a>
-          <a class="text-xl text-blue-300 font-bold hover:underline" href="#">
+          <a class="text-xl text-blue-300 font-bold hover:underline" href="/#">
             Blog
           </a>
         </div>
@@ -101,16 +101,17 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div class="navbar-menu relative z-50 hidden">
+      <div class="rounded navbar-menu relative z-50 hidden">
         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
           <div class="flex items-center mb-8">
-            <a class="mr-auto text-3xl font-bold leading-none" href="/#">
-              Galfre.v
+            
+            <a class="mr-auto text-xl font-bold text-blue-300 leading-none" href="/#">
+              VNBlog
             </a>
             <button class="navbar-close">
               <svg
-                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-700"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -129,7 +130,7 @@ const Header = () => {
             <ul>
               <li class="mb-1">
                 <a
-                  class="navbar-backdrop block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  class="navbar-backdrop block p-4 text-sm font-semibold bg-blue-50 text-blue-600 rounded"
                   href="/#"
                 >
                   Posts
@@ -137,7 +138,7 @@ const Header = () => {
               </li>
               <li class="mb-1">
                 <a
-                  class="navbar-backdrop block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  class="navbar-backdrop block p-4 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
                   href="posts/galfre-valentin"
                 >
                   ¿Quien soy?
@@ -145,17 +146,39 @@ const Header = () => {
               </li>
               <li class="mb-1">
                 <a
-                  class="navbar-backdrop block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  class="navbar-backdrop block p-4 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
                   href="https://instagram.com/galfre.v"
                 >
                   Instagram
                 </a>
               </li>
+              <li class="mb-2">
+                <p
+                  class="block p-4 text-sm font-semibold bg-blue-50 text-blue-600 rounded"
+                  
+                >
+                  Categorias
+                </p>
+              </li>
+
+              {categories.map((category) => 
+              
+                <li class="mb-1">
+                  <a
+                    class="navbar-backdrop block p-4 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
+                    href={`/category/${category.slug}`}
+                  >
+                  {category.name}
+                  </a>
+                </li>
+              
+              )}
+                
             </ul>
           </div>
           <div class="mt-auto">
             <div class="pt-6"> </div>
-            <p class="my-4 text-xs text-center text-gray-400">
+            <p class="my-4 text-xs text-start text-gray-400">
               <span>Copyright © 2021</span>
             </p>
           </div>
