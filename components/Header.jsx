@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <div className="mb-8">
       <nav class="relative w-full  md:px-10 px-4 py-4 flex justify-between items-right bg-white">
-        <div class="flex flex-column align-center justify-center">
+        <div class="flex flex-column items-center justify-center">
           <a class="text-xl text-gray-700 font-bold" href="/#">
             VN
           </a>
@@ -95,7 +95,7 @@ const Header = () => {
             </svg>
           </li>
           <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500 ml-2" href="posts/galfre-valentin">
+            <a class="text-sm text-gray-400 hover:text-gray-500 ml-2" href="post/galfre-valentin">
               ¿Quien soy?
             </a>
           </li>
@@ -103,7 +103,7 @@ const Header = () => {
       </nav>
       <div class="rounded navbar-menu relative z-50 hidden">
         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/3 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
           <div class="flex items-center mb-8">
             
             <a class="mr-auto text-xl font-bold text-blue-300 leading-none" href="/#">
@@ -139,7 +139,7 @@ const Header = () => {
               <li class="mb-1">
                 <a
                   class="navbar-backdrop block p-4 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded"
-                  href="posts/galfre-valentin"
+                  href="post/galfre-valentin"
                 >
                   ¿Quien soy?
                 </a>

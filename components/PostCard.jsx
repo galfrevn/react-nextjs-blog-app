@@ -10,7 +10,13 @@ const PostCard = ({ post }) => {
       <div class="px-8 py-7 mx-auto bg-white rounded-lg">
         <div class="flex items-center justify-between">
           <span class="font-light text-gray-600">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
-          <p href={`/post/${post.slug}`} class="px-2 py-1 font-semi text-gray-100 bg-blue-300 rounded" >
+          <p href={`/post/${post.slug}`} class={post.categories[0].slug === 'webdev' ? "px-2 py-1 font-semi text-gray-100 bg-blue-300 rounded" : "hidden"} >
+            {post.categories[0].slug}
+          </p>
+          <p href={`/post/${post.slug}`} class={post.categories[0].slug === 'unity' ? "px-2 py-1 font-semi text-gray-100 bg-green-300 rounded" : "hidden"} >
+            {post.categories[0].slug}
+          </p>
+          <p href={`/post/${post.slug}`} class={post.categories[0].slug === 'miscelaneous' ? "px-2 py-1 font-semi text-gray-100 bg-red-300 rounded" : "hidden"} >
             {post.categories[0].slug}
           </p>
         </div>
